@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { StyledLink } from "./Link.styled";
 export default function PrevNextNavigation({ volumes, currentIndex }) {
   const previousSlug = volumes[currentIndex - 1];
   const nextSlug = volumes[currentIndex + 1];
@@ -6,9 +6,14 @@ export default function PrevNextNavigation({ volumes, currentIndex }) {
   return (
     <>
       {previousSlug && (
-        <Link href={`/volumes/${previousSlug.slug}`}> ← Previous</Link>
+        <StyledLink href={`/volumes/${previousSlug.slug}`}>
+          {" "}
+          ← Previous
+        </StyledLink>
       )}
-      {nextSlug && <Link href={`/volumes/${nextSlug.slug}`}>Next →</Link>}
+      {nextSlug && (
+        <StyledLink href={`/volumes/${nextSlug.slug}`}>Next →</StyledLink>
+      )}
     </>
   );
 }

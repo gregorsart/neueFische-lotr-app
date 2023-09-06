@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { StyledLink } from "@/components/Link.styled";
 import { volumes } from "@/lib/data";
 import { useRouter } from "next/router";
 import PrevNextNavigation from "@/components/PrevNextNavigation";
@@ -31,7 +31,7 @@ export default function DetailPage() {
         ))}
       </ul>
       <nav>
-        <Link href="/volumes">All Volumes</Link>
+        <StyledLink href="/volumes">All Volumes</StyledLink>
         <PrevNextNavigation volumes={volumes} currentIndex={currentIndex} />
       </nav>
     </>

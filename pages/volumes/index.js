@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { StyledLink } from "@/components/Link.styled";
 import { volumes } from "@/lib/data";
 export default function Volumes() {
   return (
@@ -8,12 +8,14 @@ export default function Volumes() {
         {volumes.map((book) => {
           return (
             <li key={book.slug}>
-              <Link href={`./volumes/${book.slug}`}>{book.title}</Link>
+              <StyledLink href={`./volumes/${book.slug}`}>
+                {book.title}
+              </StyledLink>
             </li>
           );
         })}
       </ul>
-      <Link href="/">← Back to the Home page</Link>
+      <StyledLink href="/">← Back to the Home page</StyledLink>
     </>
   );
 }

@@ -20,25 +20,6 @@ h4 {
   font-weight: 200;
 }
 
-a,
-button {
-  font-size: 0.9rem;
-  font-weight: 100;
-  color: #348a81;
-  text-decoration: none;
-  background-color: lightgray;
-  padding: 0.5rem 1rem;
-  width: fit-content;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  border: none;
-}
-
-a:hover,
-button:hover {
-  background-color: aquamarine;
-}
-
 img {
   max-width: 100%;
   display: block;
